@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardPC</title>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google icons -->
+    <script src="https://kit.fontawesome.com/af4a22d9d5.js" crossorigin="anonymous"></script>
+</head>
+<!-- CSS Stylesheet -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    body {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    /* Search bar */
+    .header {
+        background: linear-gradient(-180deg, #F11D28, #FE612C);
+        height: 134px;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+    }
+    .hr1 {
+        padding-left: 30px;
+        color: white;
+        font-size: 1rem;
+        position: relative;
+        left: 1000px;
+
+    }
+    .sm-icons {
+        position: relative;
+        right: 450px;
+        color: white;
+        font-size: 1.1rem;
+    }
+    .wrap-search {
+        position: relative;
+        width: 650px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 12px;
+    }
+    .form-control {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        float: left;
+    }
+     #logo {
+        color: white;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .search-logo {
+        color: #FE612C;
+        float: right;
+        width: 50px;
+        font-size: 1.8rem;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 1px;
+        left: 2px;
+    }
+
+    .search-logo:hover {
+        border-radius: 20%;
+        background-color: #8a3417;
+        color: #ffffff;
+    }
+
+    .shop-logo {
+        position: relative;
+        top: 10px;
+        color: #8a3417;
+        font-size: 2rem;
+        margin-left: 30px;
+    }
+
+
+    .logo-title {
+        position: relative;
+        right: 250px;
+    }
+
+    /* ad content */
+    .wrap-carousel {
+        height: 300px;
+        position: relative;
+        top: 134px;
+    }
+
+    /* items */
+    .item-header {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .stars {
+        float: right;
+        font-size: 0.8rem;
+        color: rgb(197, 201, 6);
+    }
+    .box{
+        box-shadow: 0 0 20px rgba(218, 128, 128, 0.1);
+        transition: 1s;
+    }
+    .box:hover{
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    /* Filter & items */
+    #item-content {
+        position: relative;
+        bottom: 400px;
+    }
+
+    #filter {
+        position: relative;
+        top: 300px;
+        width: 250px;
+    }
+
+    .bar-range {
+        font-size: 1rem;
+    }
+
+    .price-bar {
+        display: flex;
+    }
+
+    .price-button {
+        color: white;
+        border: #FE612C;
+        text-align: center;
+    }
+
+    .search-header {
+        position: relative;
+        bottom: 90px;
+        text-align: center;
+    }
+    .card-text{
+        color: red;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+</style>
+
+<body>
+    <!-- header-->
+    <section class="header-bar">
+        <div class="header pt-2">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex h-items">
+                        <span class="hr1"><i class="fa-solid fa-map-location-dot"></i> Store Location</span>
+                        <div class="hr"></div>
+                        <span class="hr1"><i class="fa-solid fa-truck-front"></i> Track Your Order</span>
+                        <div class="hr"></div>
+                        <span class="hr1"><i class="fa-solid fa-comments"></i> Feedback</span>
+                        <div class="hr"></div>
+
+                        <!-- follow us-->
+                        <div class="sm-icons">
+                            <span>Follow us on</span>
+                            <span><i class="fa-brands fa-facebook"></i></span>
+                            <span><i class="fa-brands fa-twitter"></i></span>
+                            <span><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search bar -->
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center logo-title">
+                        <a href="homepage.html"><img src="/image/logo.jpg" height="90" width="90" alt="" srcset=""></a>
+                        <span id="logo" class="logo display-6">HPC</span>
+                    </div>
+
+                    <div class="wrap-search">
+                        <input type="" class="form-control" placeholder="Search for products...">
+                        <div class="wrap-icon-s">
+                            <a class="search-logo" href="search.html"><span><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="shop-logo"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Filter bar & items -->
+
+    <section class="filter-items">
+        <div id="filter" class="items col-1">
+            <h4 style="font-weight: 600;">Filter by</h4>
+            <br>
+            <h6 style="font-weight: 600;">Brand</h6>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Acer
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Asus
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    AOC
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    SpecterPro
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Samsung
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    N-vision
+                </li>
+            </ul>
+            <br>
+            <h6 style="font-weight: 600;">Rating</h6>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><span style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star text-muted"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <br>
+            <div class="price-range">
+                <h6 style="font-weight: 600;">Price Range</h6>
+                <div class="price-header">
+                    <div class="price-bar">
+                        <input type="text" maxlength="13" class="price-min w-50 px-1" placeholder="₱ MIN" value="">
+                        <span>-</span>
+                        <input type="text" maxlength="13" class="price-max w-50 px-1" placeholder="₱ MAX" value="">
+                    </div>
+                </div>
+                <button class="price-button mt-2 w-100" style="background-color: hsl(10, 98%, 52%);">Apply</button>
+            </div>
+
+        </div>
+        <div id="item-content" class="container col-11">
+            <h3 class="search-header">All Products</h3>
+
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="/image/CAT1-1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">Gigabyte GTX 1660 Super Gaming OC Dual Fan 6gb 192bit GDdr6 Gaming
+                            Videocard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></small>
+                        <small class="footer-text">5 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/376-a_2048x2048.jpg?v=1588506190"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>10,697</h6>
+                        <span class="card-title">Zotac Geforce Gtx 1050ti DirectX 12 ZT-P10510A-10L 4GB 128-Bit GDDR5
+                            PCI Express 3.0 HDCP Ready Mini Gaming Videocard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4526-a_2048x2048.jpg?v=1644808335"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>21,598</h6>
+                        <span class="card-title">Palit Rtx 3050 Dual NE63050019P1-190AD 8gb 128bit GDdr6, RGB Lighting,
+                            Ray Tracing Cores, VR Ready LHR Gaming Videocard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/GigabyteGtx1650D6GV-N1656D6-4GD4gb128bitGDdr6Coreclock1590MHz_80mmuniquebladefan_170mmcompactcardsize_Integratedwith4GBGDDR6128bitmemoryinterfaceGraphicsCardGamingVideocard-a_2048x2048.jpg?v=1629738690"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>13,528</h6>
+                        <span class="card-title">Gigabyte Gtx 1650 D6 GV-N1656D6-4GD 4gb 128bit GDdr6 Core clock 1590
+                            MHz, 80 mm unique blade fan, 170 mm compact card size, Integrated with 4GB GDDR6 128bit
+                            memory</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">9 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4253-a_fff7ba84-2bce-49e3-a9f5-76b1b22c03ba_2048x2048.jpg?v=1635398760"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>26,598</h6>
+                        <span class="card-title">Gigabyte Rx 6600 Eagle GV-R66EAGLE-8GD 8gb 128bit GDdr6, WINDFORCE 3X
+                            Cooling System,Integrated w/ 8GB GDDR6 128-bit memory interface Gaming Videocard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">7 reviews</small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://levvvel.com/wp-content/uploads/royal-kludge-rk84.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>2,558</h6>
+                        <span class="card-title">RK Royal Kludge RK84 Tri-Mode RGB 84-Keys Hot-Swappable Mechanical
+                            Keyboard - White [Brown]</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></small>
+                        <small class="footer-text">5 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://www.jib.co.th/img_master/product/original/2020081809235342189_2.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>6,708</h6>
+                        <span class="card-title">Glorious GMMK TKL Gaming Keyboard Prebuilt</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/RakkTandus87KeysMechanicalGamingKeyboard-a_1_2048x2048.jpg?v=1626506222"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,438</h6>
+                        <span class="card-title">Rakk Tandus 87 Keys Multi-Color Hotswappable Switch,Outemu Blue switch
+                            Clicky and Tactile Mechanical Gaming Keyboard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://i5.walmartimages.com/asr/a0c688a6-11c6-49f4-8b7c-13f3b2c784ac.550f002a3897470308aeb2c60938d8aa.jpeg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>3,790</h6>
+                        <span class="card-title">Keychron K2 Mechanical Keyboard (75% Layout, Wired/Bluetooth, White
+                            LED, Gateron)</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">9 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/894-a_2048x2048.jpg?v=1635835821"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,976</h6>
+                        <span class="card-title">RAKK Aptas V2 Laser-etched ABS Keycaps, Gaming keyboard, Anti-flex
+                            plate, Soft braided cableKeyboard and Mouse Bundle</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">7 reviews</small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/3864-a_540x.jpg?v=1635220665"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>8,748</h6>
+                        <span class="card-title">SpecterPro 24GX IPS 144hz|Flat Screen|1080p|Freesync|Gsync (Adaptive)
+                            Gaming Monitor
+                        </span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></small>
+                        <small class="footer-text">5 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4567-a_3c6f3714-f43e-44a3-9782-4547532c0cf9_540x.jpg?v=1652943811"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>6,498</h6>
+                        <span class="card-title">SpecterPro G24SL 24" IPS Panel, 75hz Refresh Rate, Freesync/Gsync
+                            Adaptive V-Stand and T-Stand Gaming Monitor
+                            3 reviews</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4849-a_2048x2048.jpg?v=1652774484"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">Viewsonic VX2718-P-MHD 27" 1ms FHD 165Hz refresh rate VA Flat Gaming
+                            Monitor</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/3865-a_2048x2048.jpg?v=1635220870"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">SpecterPro 27GX IPS 27 " Gaming Monitor 144hz|1ms|Flat
+                            Screen|1080P|FULL HD|</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">9 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4037-a_e52676b0-9076-452e-9f31-79fbf15826e3_540x.jpg?v=1629431866"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>7,269</h6>
+                        <span class="card-title">Acer KA240Y bi 23.8" 75Hz 1080p Full HD monitor designed to deliver a
+                            high picture quality adjustable screen tilt to comfort suit VA display Monitor</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">7 reviews</small>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://image.pushauction.com/0/0/2ead3c25-4a89-48f7-9d01-0df8687e1eda/20624299-d3cd-4b03-bb96-4a02b54e1f86.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>968</h6>
+                        <span class="card-title">G102 Prodigy Programmable RGB Lights Gaming Mouse with free mouse
+                            pad</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></small>
+                        <small class="footer-text">5 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4182-a_cb41980e-4aac-4358-857a-89241bccd01e_2048x2048.jpg?v=1642155493"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>998</h6>
+                        <span class="card-title">RAKK Talan Air Wireless Black and White PAW3370 Sensor USB Gaming Mouse
+                            and Top Cover</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://i0.wp.com/www.pcmgames.com/wp-content/uploads/2020/02/Razer-Deathadder-V2-An%C3%A1lisis-Caja-1.png?w=625&h=625&crop=1&ssl=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>3,168</h6>
+                        <span class="card-title">RAZER DeathAdder V2 Focus+ Optical Sensor Switch Wired Gaming
+                            Mouse</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-5">
+                    <img src="https://www.whatmouse.com/wp-content/uploads/steelseries-rival-300-5.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body pt-4">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,918</h6>
+                        <span class="card-title">SteelSeries Rival 3 Wired Gaming Mouse - 8,500 CPI TrueMove Core
+                            Optical Sensor - 6 Programmable Buttons</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">9 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/894-a_2048x2048.jpg?v=1635835821"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,558</h6>
+                        <span class="card-title">RAKK Aptas V2 Laser-etched ABS Keycaps, Gaming keyboard, Anti-flex
+                            plate, Soft braided cable Keyboard and Mouse Bundle</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">7 reviews</small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/3071-a_2048x2048.jpg?v=1611647068"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">Ducky One 2 RGB TKL DKON1787ST-BUSPDWWT1 MX Brown Mechanical Keyboard
+                            White DUDK984 4JTP</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/681-a_2048x2048.jpg?v=1587276467"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,694</h6>
+                        <span class="card-title">Rakk Kimat XT.LE RGB Mechanical Gaming Keyboard, Outemu Blue Switches
+                            for Clicky Sound while typing, 14 Lighting Modes, 104 Keys Gaming Keyboard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://external-preview.redd.it/6yrAraJnMNdZ16hdJAufuUtS_Dv1gk_Rx4Hap0e018k.jpg?auto=webp&s=4f182bc141fcda3f92479f592384cbd66c1482f9"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,689</h6>
+                        <span class="card-title">Royal Kludge RK61 RK71 Three Mode Hot swappable 60% RGB Mechanical
+                            Gaming Keyboard Bluetooth & Wired
+                        </span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-3">
+                    <img src="https://www.nordicgamesupply.com/sites/default/files/styles/gallery_large/public/huntsman_mini_2020_render03_1.png?itok=WvIdOmkv"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>6,533</h6>
+                        <span class="card-title">Razer Huntsman Mini 60% Optical Gaming Keyboard Linear (Red
+                            Switch)</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">1 review</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/3866-a_13e1a57d-26a2-4433-a32c-4972fc489220_2048x2048.jpg?v=1632116740"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,895</h6>
+                        <span class="card-title">RAKK Pluma 68 Keys RGB Wireless Bluetooth 5.0 Outemu Blue/Red Removable
+                            Type C Braided Cable Mechanical Gaming Keyboard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/GigabyteRtx3060AorusEliteGV-N3060AORUS-E-12GD-2.012gb192bitGDdr6WINDFORCE3XCoolingSystemwithalternatespinningfans_RGBFusion2.0_ProtectionmetalbackplateLimitedHashR-a_2048x2048.jpg?v=1629741043"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>33,448</h6>
+                        <span class="card-title">Gigabyte Rtx 3060 Aorus Elite GV-N3060AORUS-E-12GD-2.0 12gb 192bit
+                            GDdr6 WINDFORCE 3X Cooling System with alternate spinning fans, RGB Fusion 2.0</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/BiostarRx560VA5615RF414gb128bitDdr5AMDXConnectandHDRReady_DirectX12andVulkanOptimized_GamingVideocard-a_2048x2048.jpg?v=1643330806"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">Biostar Rx 560 VA5615RF41 4gb 128bit Ddr5</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/1207-a_2048x2048.jpg?v=1629724392"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">MSI GTX 1660 Super Ventus Xs OC Videocard 6gb 192bit GDdr6</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4482-A_f323a84a-42b3-4892-84f9-096139483b90_2048x2048.jpg?v=1643108288"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>14,224</h6>
+                        <span class="card-title">Zotac Gtx 1650 OC ZT-T16520F-10L 4gb 128bit GDdr6, 4K Ready, Sunflower
+                            Heatsink, PCIe Bus Powered Gaming Videocard</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">1 review</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/3016-a_2048x2048.jpg?v=1588509497"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>11,268</h6>
+                        <span class="card-title">Galax Gtx 1050ti 1Click OC Gaming Videocard 4gb 128bit Ddr5</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://th.bing.com/th/id/OIP.rB2hE9y9BG2oBAOyUu7hrgHaI5?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>3,968</h6>
+                        <span class="card-title">Razer Naga Pro Modular Wireless Gaming Mouse with Swappable Side Plate
+                            w/ 2, 6, 12 Button Configurations</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-5">
+                    <img src="https://www.techbooze.in/wp-content/uploads/2020/09/Glorious-Model-O-02.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>3,962</h6>
+                        <span class="card-title">Glorious Model O (GLO-MS-OW-MB) RGB Wireless Gaming Mouse | Glorious
+                            BAMF Sensor | 400 IPS | 10000hz (1ms) Polling Rate</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-1">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71hoSHUfcbL.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,999</h6>
+                        <span class="card-title">HyperX Pulsefire Surge Wired RGB Gaming Mouse Symmetrical with Pixart
+                            3389 Sensor, 16000 DPI, 6 Programmable Buttons</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/Rakk_Dasig_Wireless_Black-a_540x.jpg?v=1643329882"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>899</h6>
+                        <span class="card-title">RAKK Dasig Wireless RGB Gaming Mouse | 3325 Sensor | Huano Blue Switch
+                            | Black, White, Pink</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">1 review</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://th.bing.com/th/id/OIP.dQ0RXlsUwiodz9lvCgzJPwHaHa?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>2,528</h6>
+                        <span class="card-title">Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 16K
+                            Sensor, 16,000 DPI, RGB, Adjustable Weights, 11 Programmable Buttons</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4205-a_540x.jpg?v=1629731666"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">Nvision GT27R18V3 27" 165Hz Curved Gaming Monitor</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-3">
+                    <img src="https://c1.neweggimages.com/ProductImageCompressAll1280/AJ7WD2103115B4LL.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>8,250</h6>
+                        <span class="card-title">AOC G2490VX 23.8" FHD FRAMELESS 1MS 144HZ GAMING MONITOR 144hz 24inch
+                            Gaming monitor</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-2">
+                    <img src="https://images.hotukdeals.com/threads/content/ZlXkZ/3743145.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>23,968</h6>
+                        <span class="card-title">Samsung Odyssey G7 (LC27G75TQSEXXP) 27" 240Hz WQHD Curved Gaming
+                            Monitor with VA Panel, Supreme 1000R Curve, VESA DisplayHDR 600</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card pt-2">
+                    <img src="https://th.bing.com/th/id/OIP.iz3rxUj4tNI1YbuoLL8FpgHaFj?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>33,526</h6>
+                        <span class="card-title">Asus ROG Strix XG27UQ 27" 4K (3840 x 2160) 144Hz, DSC, Adaptive Sync
+                            Gaming Monitor</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">1 review</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://th.bing.com/th/id/OIP.O8TnHppXR1zFgE99_skXQAHaHa?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>18,999</h6>
+                        <span class="card-title">Acer Predator XB1 XB241H bmipr 24" Full HD 1920x1080 NVIDIA G-Sync
+                            Display Gaming Monitor</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        </div>
+
+    </section>
+    <!-- Footer  -->
+    <section class="footer">
+        <footer class="bg-dark text-white pt-5 pb-4">
+
+            <div class="container text-center text-md-left">
+
+                <div class="row text-center text-md-left">
+
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">HardPC</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Graphics card</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Monitor</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Mouse</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Keyboard</a>
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Customer Support</h5>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Cancellation policy</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Delivery</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;">Order and Payments</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Privacy Policy</a>
+                        </p>
+                         <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Return and Refunds</a>
+                        </p>
+                         <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Warranty Information</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                        <p>
+                            <i class="fas fa-home mr-3"></i>Nuvali, Laguna
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i>hardpc@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i>+92 6969696969
+                        </p>
+                        <p>
+                            <i class="fas fa-print	 mr-3"></i>+01 9696969696
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="mb-4">
+
+                <div class="row align-items-center">
+
+                    <div class="col-md-7 col-lg-8">
+                        <p> Copyright ©2022 All rights reserved by:
+                            <a href="homepage.html" style="text-decoration: none;">
+                                <strong class="text-warning">HardPC</strong>
+                            </a></p>
+
+                    </div>
+
+                    <div class="col-md-5 col-lg-4">
+                        <div class="text-center text-md-right">
+
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-facebook"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-google-plus"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-youtube"></i></a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>

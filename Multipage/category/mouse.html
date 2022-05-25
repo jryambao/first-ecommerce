@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardPC</title>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google icons -->
+    <script src="https://kit.fontawesome.com/af4a22d9d5.js" crossorigin="anonymous"></script>
+</head>
+<!-- CSS Stylesheet -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    /* Search bar */
+    .header {
+        background: linear-gradient(-180deg, #F11D28, #FE612C);
+        height: 134px;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+    }
+
+    .hr1 {
+        padding-left: 30px;
+        color: white;
+        font-size: 1rem;
+        position: relative;
+        left: 1000px;
+
+    }
+
+    .sm-icons {
+        position: relative;
+        right: 450px;
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .wrap-search {
+        position: relative;
+        width: 650px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 12px;
+    }
+
+    .form-control {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        float: left;
+    }
+
+    #logo {
+        color: white;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .search-logo {
+        color: #FE612C;
+        float: right;
+        width: 50px;
+        font-size: 1.8rem;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 1px;
+        left: 2px;
+    }
+
+    .search-logo:hover {
+        border-radius: 20%;
+        background-color: #8a3417;
+        color: #ffffff;
+    }
+
+    .shop-logo {
+        position: relative;
+        top: 10px;
+        color: #8a3417;
+        font-size: 2rem;
+        margin-left: 30px;
+    }
+
+
+    .logo-title {
+        position: relative;
+        right: 250px;
+    }
+
+    /* ad content */
+    .wrap-carousel {
+        height: 300px;
+        position: relative;
+        top: 134px;
+    }
+
+    /* items */
+    .item-header {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .stars {
+        float: right;
+        font-size: 0.8rem;
+        color: rgb(197, 201, 6);
+    }
+    .box{
+        box-shadow: 0 0 20px rgba(218, 128, 128, 0.1);
+        transition: 1s;
+    }
+    .box:hover{
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    /* brands */
+    .card-brand {
+        padding-top: 20px;
+    }
+    .mouse-cover{
+        position: relative;
+        top: 100px;
+        align-items: center;
+    }
+
+    .item-brand {
+        padding-top: 200px;
+        text-align: center;
+    }
+
+    /* filter & item content */
+    #item-content {
+        position: relative;
+        bottom: 550px;
+    }
+
+    #filter {
+        position: relative;
+        top: 150px;
+        width: 250px;
+    }
+
+    .bar-range {
+        font-size: 1rem;
+    }
+
+    .price-bar {
+        display: flex;
+    }
+
+    .price-button {
+        color: white;
+        border: #FE612C;
+        text-align: center;
+
+    }
+    .card-text{
+        color: red;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+</style>
+
+<body>
+    <!-- header-->
+    <section class="header-bar">
+        <div class="header pt-2">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex h-items">
+                        <span class="hr1"><i class="fa-solid fa-map-location-dot"></i> Store Location</span>
+                        <div class="hr"></div>
+                        <span class="hr1"><i class="fa-solid fa-truck-front"></i> Track Your Order</span>
+                        <div class="hr"></div>
+                        <span class="hr1"><i class="fa-solid fa-comments"></i> Feedback</span>
+                        <div class="hr"></div>
+
+                        <!-- follow us-->
+                        <div class="sm-icons">
+                            <span>Follow us on</span>
+                            <span><i class="fa-brands fa-facebook"></i></span>
+                            <span><i class="fa-brands fa-twitter"></i></span>
+                            <span><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search bar -->
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center logo-title">
+                        <a href="/homepage.html"><img src="/image/logo.jpg" height="90" width="90" alt="" srcset=""></a>
+                        <span id="logo" class="logo display-6">HPC</span>
+                    </div>
+
+                    <div class="wrap-search">
+                        <input type="" class="form-control" placeholder="Search for products...">
+                        <div class="wrap-icon-s">
+                            <a class="search-logo" href="/search.html"><span><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="shop-logo"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ads content -->
+
+    <div class="mouse-cover">
+        <img src="/image/MOU-AD.JPG" alt="" srcset="">
+    </div>
+    <!-- Brands -->
+    <div class="container">
+        <section class="brands">
+            <div class="brand-header">
+                <h3 class="item-brand">BRANDS</h3>
+            </div>
+            <div class="card-group card-brand">
+                <div class="card pt-3">
+                    <img src="https://sm.ign.com/ign_ap/screenshot/default/new-rakk-logo_yeua.png" class="card-img-top"
+                        alt="...">
+                </div>
+                <div class="card pt-4">
+                    <img src="https://th.bing.com/th/id/R.beff8d5b256f2731d6b462a53093702e?rik=sgvZFGlVVIPXRw&riu=http%3a%2f%2fappletechtalk.com%2fwp-content%2fuploads%2f2018%2f08%2fLogitech-G-Logo.jpg&ehk=3%2bOE3KSQLpOZmgZilFugag3As3EhXtKTGUH4qmbYVQU%3d&risl=&pid=ImgRaw&r=0"
+                        class="card-img-top" alt="...">
+
+                </div>
+                <div class="card pt-5">
+                    <img src="https://logos-download.com/wp-content/uploads/2019/01/Razer_Logo_text_green.png"
+                        class="card-img-top" alt="...">
+                </div>
+                <div class="card pt-5">
+                    <img src="https://th.bing.com/th/id/OIP.vCygyUG-prspvd9pauXIagHaBL?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                </div>
+                <div class="card pt-3">
+                    <img src="https://th.bing.com/th/id/R.b426bfece956ea46ab291da13ce7b0b5?rik=7RmYYqupjGSxqg&riu=http%3a%2f%2fcogconnected.com%2fwp-content%2fuploads%2f2016%2f01%2fhyperx-logo.jpg&ehk=tgJOSi0pfNg9bKfOrH7xTSfAa3FClLxki7Iea2vq9Qo%3d&risl=&pid=ImgRaw&r=0"
+                        height="100" class="card-img-top" alt="...">
+                </div>
+                <div class="card">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/09/Steelseries-logo.png" height="140"
+                        class="card-img-top" alt="...">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    </div>
+    <!-- Filter bar & items -->
+    <section class="filter-items">
+        <div id="filter" class="items col-1">
+            <h4 style="font-weight: 600;">Filter by</h4>
+            <br>
+            <h6 style="font-weight: 600;">Brand</h6>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Glorious
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    HyperX
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Logitech G
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Rakk
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Razer
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                    Steelseries
+                </li>
+            </ul>
+            <br>
+            <h6 style="font-weight: 600;">Rating</h6>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><span style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star text-muted"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><i class="fa-solid fa-star text-muted"></i><i
+                        class="fa-solid fa-star text-muted"></i><span
+                        style="color: black !important;">&up</span></small>
+            </li>
+            <br>
+            <div class="price-range">
+                <h6 style="font-weight: 600;">Price Range</h6>
+                <div class="price-header">
+                    <div class="price-bar">
+                        <input type="text" maxlength="13" class="price-min w-50 px-1" placeholder="₱ MIN" value="">
+                        <span>-</span>
+                        <input type="text" maxlength="13" class="price-max w-50 px-1" placeholder="₱ MAX" value="">
+                    </div>
+                </div>
+                <button class="price-button mt-2 w-100" style="background-color: hsl(10, 98%, 52%);">Apply</button>
+            </div>
+        </div>
+        <div id="item-content" class="container col-11">
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://image.pushauction.com/0/0/2ead3c25-4a89-48f7-9d01-0df8687e1eda/20624299-d3cd-4b03-bb96-4a02b54e1f86.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>968</h6>
+                        <span class="card-title">G102 Prodigy Programmable RGB Lights Gaming Mouse with free mouse
+                            pad</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></small>
+                        <small class="footer-text">5 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/4182-a_cb41980e-4aac-4358-857a-89241bccd01e_2048x2048.jpg?v=1642155493"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>998</h6>
+                        <span class="card-title">RAKK Talan Air Wireless Black and White PAW3370 Sensor USB Gaming Mouse
+                            and Top Cover</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://i0.wp.com/www.pcmgames.com/wp-content/uploads/2020/02/Razer-Deathadder-V2-An%C3%A1lisis-Caja-1.png?w=625&h=625&crop=1&ssl=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="disc d-flex">
+                            <s><h6 class="card-text text-muted"><i class="fa-solid fa-peso-sign"></i>3,168</h6></s><h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>2,878</h6>
+                        </div>    
+                        <span class="card-title">RAZER DeathAdder V2 Focus+ Optical Sensor Switch Wired Gaming
+                            Mouse</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box pt-5">
+                    <img src="https://www.whatmouse.com/wp-content/uploads/steelseries-rival-300-5.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body pt-4">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,918</h6>
+                        <span class="card-title">SteelSeries Rival 3 Wired Gaming Mouse - 8,500 CPI TrueMove Core
+                            Optical Sensor - 6 Programmable Buttons</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">9 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/894-a_2048x2048.jpg?v=1635835821"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,558</h6>
+                        <span class="card-title">RAKK Aptas V2 Laser-etched ABS Keycaps, Gaming keyboard, Anti-flex
+                            plate, Soft braided cable Keyboard and Mouse Bundle</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">7 reviews</small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-group justify-content">
+                <div class="card box">
+                    <img src="https://th.bing.com/th/id/OIP.rB2hE9y9BG2oBAOyUu7hrgHaI5?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>3,968</h6>
+                        <span class="card-title">Razer Naga Pro Modular Wireless Gaming Mouse with Swappable Side Plate
+                            w/ 2, 6, 12 Button Configurations</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box pt-5">
+                    <img src="https://www.techbooze.in/wp-content/uploads/2020/09/Glorious-Model-O-02.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>3,962</h6>
+                        <span class="card-title">Glorious Model O (GLO-MS-OW-MB) RGB Wireless Gaming Mouse | Glorious
+                            BAMF Sensor | 400 IPS | 10000hz (1ms) Polling Rate</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+                <div class="card box pt-1">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71hoSHUfcbL.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>1,999</h6>
+                        <span class="card-title">HyperX Pulsefire Surge Wired RGB Gaming Mouse Symmetrical with Pixart
+                            3389 Sensor, 16000 DPI, 6 Programmable Buttons</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star text-muted"></i></small>
+                        <small class="footer-text">3 reviews</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://cdn.shopify.com/s/files/1/0101/4864/2879/products/Rakk_Dasig_Wireless_Black-a_540x.jpg?v=1643329882"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>899</h6>
+                        <span class="card-title">RAKK Dasig Wireless RGB Gaming Mouse | 3325 Sensor | Huano Blue Switch
+                            | Black, White, Pink</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">1 review</small>
+                    </div>
+                </div>
+                <div class="card box">
+                    <img src="https://th.bing.com/th/id/OIP.dQ0RXlsUwiodz9lvCgzJPwHaHa?pid=ImgDet&rs=1"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <br>
+                        <br>
+                        <h6 class="card-text"><i class="fa-solid fa-peso-sign"></i>2,528</h6>
+                        <span class="card-title">Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 16K
+                            Sensor, 16,000 DPI, RGB, Adjustable Weights, 11 Programmable Buttons</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="stars text-muted"><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></small>
+                        <small class="footer-text">No reviews</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Footer  -->
+    <section class="footer">
+        <footer class="bg-dark text-white pt-5 pb-4">
+
+            <div class="container text-center text-md-left">
+
+                <div class="row text-center text-md-left">
+
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">HardPC</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Graphics card</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Monitor</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Mouse</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Keyboard</a>
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Customer Support</h5>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Cancellation policy</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Delivery</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;">Order and Payments</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Privacy Policy</a>
+                        </p>
+                         <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Return and Refunds</a>
+                        </p>
+                         <p>
+                            <a href="#" class="text-white" style="text-decoration: none;"> Warranty Information</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                        <p>
+                            <i class="fas fa-home mr-3"></i>Nuvali, Laguna
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i>hardpc@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i>+92 6969696969
+                        </p>
+                        <p>
+                            <i class="fas fa-print	 mr-3"></i>+01 9696969696
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="mb-4">
+
+                <div class="row align-items-center">
+
+                    <div class="col-md-7 col-lg-8">
+                        <p> Copyright ©2022 All rights reserved by:
+                            <a href="homepage.html" style="text-decoration: none;">
+                                <strong class="text-warning">H-PC</strong>
+                            </a></p>
+
+                    </div>
+
+                    <div class="col-md-5 col-lg-4">
+                        <div class="text-center text-md-right">
+
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-facebook"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-google-plus"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                            class="fab fa-youtube"></i></a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
